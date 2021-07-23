@@ -1,0 +1,31 @@
+<form (submit)="onSignIn(signInForm)"
+        #signInForm="ngForm">
+    <div class="imgcontainer">
+      <img src="https://www.kindpng.com/picc/m/25-255695_android-app-icon-sample-icon-1024-x-1024.png" alt="Avatar" height="150" width="150">
+    </div>
+  
+    <div class="container">
+      <label for="email"><b>Email address</b></label>
+      <input 
+      name="email"
+      ngModel
+      type="email"
+      #emailInput="ngModel"
+      [(ngModel)]="email_address"
+      email
+      placeholder="Enter Username" required>
+  
+      <label for="password"><b>Password</b></label>
+      <input 
+              [(ngModel)]="password"
+              ngModel
+              type="password"
+              minlength="8"
+              #passwordInput="ngModel"
+              required
+      name="password" placeholder="Enter Password" >
+  
+      <button type="submit">Login</button>
+    </div>
+  
+  </form>  
